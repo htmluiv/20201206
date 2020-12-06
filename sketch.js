@@ -5,11 +5,11 @@ function setup() {
 }
 
 function draw() {
-  background(0);
+  background(slider.value()/4);
   textStyle(BOLD);
   textSize(20);
   fill(255, 0, 0);
   text(timepass+ floor(slider.value()), 0, 20);
-  fill(110);
+  fill(170, 0, 0);
   text('Days After COVID-19 Emerges', 40, 20);
 }
