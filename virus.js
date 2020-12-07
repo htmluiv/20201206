@@ -1,9 +1,11 @@
 class Virus   {
   constructor(x, y)  {
     this.pos = createVector(x, y);
-    this.vel = createVector(0, 0);
+    this.vel = createVector(random(-1, 1), random(-1, 0));
     this.acc = createVector(0, 0);
   }
+
+
 
   display() {
     // strokeWeight(3);
