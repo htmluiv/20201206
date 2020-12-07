@@ -12,7 +12,6 @@ function setup() {
 }
 
 function draw() {
-  l = l+slider.value();
   background(slider.value()/4);
   emoji.display();
   strokeWeight(0);
@@ -23,7 +22,7 @@ function draw() {
   fill(170, 0, 0);
   text('Days After COVID-19 Emerges', 40, 20);
 
-  for(let i=0; i<slider.value()/10; i++)  {
+  for(let i=0; i<200-slider.value()/5; i++)  {
     vir[i].display();
     vir[i].update();
   }
