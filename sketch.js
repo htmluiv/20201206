@@ -12,6 +12,7 @@ function setup() {
 
 function draw() {
   background(slider.value()/4);
+  emoji.display();
   strokeWeight(0);
   textStyle(BOLD);
   textSize(20);
@@ -22,5 +23,4 @@ function draw() {
   for(let i=0; i<vir.length; i++)  {
     vir[i].display();
   }
-  emoji.display();
 }

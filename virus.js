@@ -6,8 +6,9 @@ class Virus   {
   }
 
   display() {
-    strokeWeight(3);
-    stroke(80);
+    // strokeWeight(3);
+    // stroke(250-slider.value()/4);
+    noStroke()
     fill(255, 0, 0);
     ellipse(this.pos.x, this.pos.y, 10, 10);
   }
