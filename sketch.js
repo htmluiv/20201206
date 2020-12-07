@@ -3,7 +3,7 @@ let vir = [];
 function setup() {
   createCanvas(400, 400);
   for(let i=0; i<100; i++)  {
-    vir[i] = new Virus(random(width), random(height));
+    vir[i] = new Virus(random(width), random(40, 400));
   }
 
   slider = createSlider(1, 999, 2);
