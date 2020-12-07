@@ -5,13 +5,14 @@ function setup() {
   for(let i=0; i<100; i++)  {
     vir[i] = new Virus(random(width), random(40, 400));
   }
-
+  emoji = new Emoji();
   slider = createSlider(1, 999, 2);
   timepass = 0;
 }
 
 function draw() {
   background(slider.value()/4);
+  strokeWeight(0);
   textStyle(BOLD);
   textSize(20);
   fill(255, 0, 0);
@@ -21,4 +22,5 @@ function draw() {
   for(let i=0; i<vir.length; i++)  {
     vir[i].display();
   }
+  emoji.display();
 }
