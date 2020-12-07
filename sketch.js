@@ -5,6 +5,7 @@ function setup() {
   for(let i=0; i<100; i++)  {
     vir[i] = new Virus(random(width), random(height));
   }
+
   slider = createSlider(1, 999, 2);
   timepass = 0;
 }
