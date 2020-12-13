@@ -1,5 +1,4 @@
 let vir = [];
-let l = 1;
 
 function setup() {
   createCanvas(400, 400);
@@ -9,6 +8,7 @@ function setup() {
   emoji = new Emoji();
   slider = createSlider(1, 999, 2);
   timepass = 0;
+  repeller = new Repeller();
 }
 
 function draw() {
@@ -26,4 +26,6 @@ function draw() {
     vir[i].display();
     vir[i].update();
   }
+
+  repeller.display();
 }
