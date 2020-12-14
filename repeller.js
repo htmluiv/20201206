@@ -31,7 +31,9 @@ class Repeller {
      fill(0, 0, 200);
    }
    ellipse(this.pos.x, this.pos.y, 50, 50);
-   textSize(20);
+   noStroke();
+   fill(255, 220, 0);
+   textSize(25);
    textAlign(CENTER, CENTER);
    text('US', this.pos.x, this.pos.y);
  }
