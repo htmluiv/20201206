@@ -1,7 +1,7 @@
 class Repeller {
 
   constructor() {
-   this.pos = createVector(200, 200);
+   this.pos = createVector(width/2, height/2+15);
    this.mass = 10;
    this.G = 1;
    this.dragOffset = createVector(0, 0);
@@ -21,16 +21,17 @@ class Repeller {
  display() {
    stroke(255, 220, 0);
    if(this.dragging)  {
-     strokeWeight(4);
+     strokeWeight(5);
      fill(0, 0, 255);
    } else if (this.rollover) {
-     strokeWeight(6);
+     strokeWeight(5);
      fill(0, 0, 220);
    } else {
-     strokeWeight(4);
+     strokeWeight(3);
      fill(0, 0, 200);
    }
    ellipse(this.pos.x, this.pos.y, 50, 50);
+   textSize(20);
    textAlign(CENTER, CENTER);
    text('WE', this.pos.x, this.pos.y);
  }

@@ -26,11 +26,11 @@ function draw() {
 
   strokeWeight(0);
   textStyle(BOLD);
-  textSize(20);
+  textSize(35);
   fill(255, 0, 0);
-  text(timepass+ floor(slider.value()), 25, 20);
-  fill(170, 0, 0);
-  text('Days After COVID-19 Emerges', 65, 20);
+  text(timepass+ floor(slider.value()), 40, 20);
+  fill(255, 0, 0);
+  text('Days After COVID-19 Emerges', 330, 20);
 }
 
 function mouseMoved() {

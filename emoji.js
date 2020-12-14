@@ -1,15 +1,15 @@
 class Emoji  {
   display()  {
-    let x = 200;
-    let y = 200;
-    let r = 100;
-    strokeWeight(4);
+    let x = width/2;
+    let y = height/2;
+    let r = 250;
+    strokeWeight(8);
     stroke(250-slider.value()/4, 200);
-    fill(255, 180, 0, 150);
+    fill(255, 180, 0, 0);
     ellipse(x, y, r);
-    line(x-25, y-20+slider.value()/100, x-10, y-10); //left eye
-    line(x+25, y-20+slider.value()/100, x+10, y-10); //rignt eye
-    line(x-20, y+30-slider.value()/50, x, y+20); // left lip
-    line(x+20, y+30-slider.value()/50, x, y+20); // right lip
+    line(x-55, y-50+slider.value()/25, x-20, y-20); //left eye
+    line(x+55, y-50+slider.value()/25, x+20, y-20); //rignt eye
+    line(x-50, y+80-slider.value()/20, x, y+50); // left lip
+    line(x+50, y+80-slider.value()/20, x, y+50); // right lip
   }
 }
