@@ -1,15 +1,15 @@
 class Repeller {
 
   constructor() {
-   this.pos = createVector(this.mouseX, this.mouseY);
+   this.pos = createVector(200,200);
    this.mass = 20;
-   this.G = -1;
+   this.G = -5;
  }
 
  repel(virus)  {
    let force = p5.Vector.sub(this.pos, virus.pos);
    let distance = force.mag();
-   distance = constrain(distance, 10, 50);
+   distance = constrain(distance, 10, 100);
    let strength = (this.G * this.mass * virus.mass) / (distance * distance);
    force.setMag(strength);
    return force;
@@ -18,6 +18,6 @@ class Repeller {
  display() {
    noStroke();
    fill(150, 0, 255);
-   ellipse(mouseX, mouseY, 50, 50);
+   ellipse(this.pos.x, this.pos.y, 50, 50);
  }
 }

@@ -3,6 +3,7 @@ class Virus   {
     this.pos = createVector(x, y);
     this.vel = createVector(random(-1, 1), random(-1, 1));
     this.acc = createVector(0, 0);
+    this.mass = 1;
   }
 
   applyForce(force)  {
