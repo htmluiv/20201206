@@ -2,8 +2,8 @@ class Repeller {
 
   constructor() {
    this.pos = createVector(200, 200);
-   this.mass = 20;
-   this.G = -5;
+   this.mass = 10;
+   this.G = 1;
    this.dragOffset = createVector(0, 0);
    this.dragging = false;
    this.rollover = false;
@@ -12,7 +12,7 @@ class Repeller {
  repel(virus)  {
    let force = p5.Vector.sub(this.pos, virus.pos);
    let distance = force.mag();
-   distance = constrain(distance, 40, 200);
+   distance = constrain(distance, 10, 10);
    let strength = (this.G * this.mass * virus.mass) / (distance * distance);
    force.setMag(strength);
    return force;
@@ -34,7 +34,7 @@ class Repeller {
  //mouse interaction
   handlePress(mx, my) {
     let d = dist(mx, my, this.pos.x, this.pos.y);
-    if(d<this.mass) {
+    if(d<50) {
       this.dragging = true;
       this.dragOffset.x = this.pos.x - mx;
       this.dragOffset.y = this.pos.y - my;
@@ -43,7 +43,7 @@ class Repeller {
 
   handleHover(mx, my)  {
     let d = dist(mx, my, this.pos.x, this.pos.y);
-    if(d<this.mass) {
+    if(d<50) {
       this.rollover = true;
     } else {
       this.rollover = false;

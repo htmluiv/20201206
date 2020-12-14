@@ -2,7 +2,7 @@ let viruses = [];
 let repeller;
 
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(600, 600);
   for(let i=0; i<200; i++)  {
     viruses[i] = new Virus(random(width), random(height));
   }
