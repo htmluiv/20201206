@@ -1,9 +1,9 @@
-let vir = [];
+let viruses = [];
 
 function setup() {
   createCanvas(400, 400);
   for(let i=0; i<200; i++)  {
-    vir[i] = new Virus(random(width), random(40, 400));
+    viruses[i] = new Virus(random(width), random(40, 400));
   }
   emoji = new Emoji();
   slider = createSlider(1, 999, 2);
@@ -23,9 +23,10 @@ function draw() {
   text('Days After COVID-19 Emerges', 40, 20);
 
   for(let i=0; i<200-slider.value()/5; i++)  {
-    vir[i].display();
-    vir[i].update();
+    let force = repeller.repel(viruses[i]);
+    viruses[i].applyForce(force);
+    viruses[i].display();
+    viruses[i].update();
   }
-
   repeller.display();
 }
