@@ -32,3 +32,20 @@ function draw() {
   fill(170, 0, 0);
   text('Days After COVID-19 Emerges', 65, 20);
 }
+
+function mouseMoved() {
+  repeller.handleHover(mouseX, mouseY);
+}
+
+function mousePressed() {
+  repeller.handlePress(mouseX, mouseY);
+}
+
+function mouseDragged() {
+  repeller.handleHover(mouseX, mouseY);
+  repeller.handleDrag(mouseX, mouseY);
+}
+
+function mouseReleased()  {
+  repeller.stopDragging()
+}
