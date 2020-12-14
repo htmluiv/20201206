@@ -19,16 +19,20 @@ class Repeller {
  }
 
  display() {
-   noStroke();
-   // fill(150, 0, 255);
+   stroke(255, 220, 0);
    if(this.dragging)  {
-     fill(50);
+     strokeWeight(4);
+     fill(0, 0, 255);
    } else if (this.rollover) {
-     fill(100);
+     strokeWeight(6);
+     fill(0, 0, 220);
    } else {
-     fill(175, 200);
+     strokeWeight(4);
+     fill(0, 0, 200);
    }
    ellipse(this.pos.x, this.pos.y, 50, 50);
+   textAlign(CENTER, CENTER);
+   text('WE', this.pos.x, this.pos.y);
  }
 
  //mouse interaction
