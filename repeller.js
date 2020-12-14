@@ -1,7 +1,7 @@
 class Repeller {
 
-  constructor() {
-   this.pos = createVector(200,200);
+  constructor(x, y) {
+   this.pos = createVector(x, y);
    this.mass = 20;
    this.G = -5;
  }
@@ -18,6 +18,6 @@ class Repeller {
  display() {
    noStroke();
    fill(150, 0, 255);
-   ellipse(this.pos.x, this.pos.y, 50, 50);
+   ellipse(mouseX, mouseY, 50, 50);
  }
 }
