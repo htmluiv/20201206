@@ -33,7 +33,7 @@ class Repeller {
    ellipse(this.pos.x, this.pos.y, 50, 50);
    textSize(20);
    textAlign(CENTER, CENTER);
-   text('WE', this.pos.x, this.pos.y);
+   text('US', this.pos.x, this.pos.y);
  }
 
  //mouse interaction
