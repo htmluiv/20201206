@@ -28,9 +28,9 @@ function draw() {
   textStyle(BOLD);
   textSize(35);
   fill(255, 0, 0);
-  text(timepass+ floor(slider.value()), 40, 20);
+  text(timepass+ floor(slider.value()), 40, 570);
   fill(255, 0, 0);
-  text('Days After COVID-19 Emerges', 330, 20);
+  text('Days After COVID-19 Emerges', 330, 570);
 }
 
 function mouseMoved() {
